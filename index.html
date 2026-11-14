@@ -181,6 +181,7 @@ h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.8rem,4.6vw,3.3
 .panel{flex:0 0 100%;min-width:0;padding:30px clamp(18px,4vw,36px) 34px}
 .panel h3{font-family:var(--f-display);font-size:clamp(1.25rem,2.9vw,1.9rem);font-weight:700;letter-spacing:-.03em;line-height:1.15;text-wrap:balance}
 .panel .org{margin-top:8px;font-weight:700;font-size:1.05rem}
+.panel .note{margin-top:14px;max-width:72ch;color:var(--muted);font-size:.92rem;line-height:1.5;border-left:3px solid var(--ink);padding-left:12px;border-radius:0}
 .when{display:inline-block;margin-top:10px;padding:2px 12px;background:var(--amber);color:var(--dark);border:2px solid var(--ink);font-family:var(--f-mono);font-weight:700;font-size:.74rem}
 .bul{display:grid;gap:14px;margin-top:24px;max-width:78ch}
 .bul li{position:relative;padding-left:28px}
@@ -223,6 +224,23 @@ h2{font-family:var(--f-display);font-weight:800;font-size:clamp(1.8rem,4.6vw,3.3
 .slide .bul{margin-top:18px;gap:10px;font-size:.95rem}
 .big{margin-top:18px;font-family:var(--f-display);font-weight:800;font-size:2.95rem;line-height:1;letter-spacing:-.04em}
 .big small{font-family:var(--f-body);font-weight:700;font-size:.9rem;letter-spacing:0;margin-left:10px}
+
+/* Projects */
+.projgrid{display:grid;gap:26px}
+@media (min-width:780px){.projgrid{grid-template-columns:1fr 1fr}.proj.feat{grid-column:1/-1}}
+.proj{display:flex;flex-direction:column;padding:26px 24px 28px;border:3px solid var(--ink);color:var(--dark);min-width:0}
+.proj.p1{background:var(--violet);color:#fff;--rot:-1deg}
+.proj.p2{background:var(--amber);--rot:.9deg}
+.proj.p3{background:var(--sage);--rot:-.8deg}
+.proj h3{margin-top:14px;font-family:var(--f-display);font-size:1.28rem;font-weight:700;letter-spacing:-.03em;line-height:1.2}
+.proj .sub{margin-top:6px;font-weight:700;font-size:.95rem}
+.proj .d{margin-top:14px;font-size:.96rem;line-height:1.55}
+.proj .stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.proj .stack li{padding:4px 11px;border:2px solid currentColor;border-radius:999px;font-family:var(--f-mono);font-weight:700;font-size:.66rem;letter-spacing:.06em;text-transform:uppercase}
+.proj .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:auto;padding-top:22px}
+.proj .lnk{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border:3px solid var(--dark);border-radius:999px;background:#fff;color:var(--dark);font-weight:700;font-size:.85rem;text-decoration:none;box-shadow:3px 3px 0 var(--dark);transition:translate .15s,box-shadow .15s}
+.proj .lnk:hover{translate:2px 2px;box-shadow:1px 1px 0 var(--dark)}
+.proj .lnk svg{width:13px;height:13px}
 
 /* Skills */
 .skgrid{display:grid;gap:26px}
@@ -276,6 +294,7 @@ footer a{text-decoration:none;border-bottom:2px solid var(--amber)}
       <a href="#profile" data-go="profile">Profile</a>
       <a href="#experience" data-go="experience">Experience</a>
       <a href="#process" data-go="process">Process</a>
+      <a href="#projects" data-go="projects">Projects</a>
       <a href="#leadership" data-go="leadership">Leadership</a>
       <a href="#skills" data-go="skills">Skills</a>
       <a href="#contact" data-go="contact">Contact</a>
@@ -299,19 +318,19 @@ footer a{text-decoration:none;border-bottom:2px solid var(--amber)}
             <span class="w o"><span class="l" style="--i:6">B</span><span class="l" style="--i:7">I</span><span class="l" style="--i:8">N</span></span>
             <span class="w y"><span class="l" style="--i:9">R</span><span class="l" style="--i:10">E</span><span class="l" style="--i:11">Z</span><span class="l" style="--i:12">A</span></span>
           </h1>
-          <p class="role">Marketing and Business Development Officer<span class="sticker s-lilac">Technohaven Company Limited</span></p>
+          <p class="role">Business Analyst<span class="sticker s-lilac">Technohaven Company Limited</span></p>
           <div class="focus-line">
             <span class="lead">Working on</span>
             <span class="rot" id="rot"><span class="rot-track" id="rotTrack">
-              <span>Government business development</span>
-              <span>Tender and EOI support</span>
-              <span>FinTech go-to-market strategy</span>
-              <span>E-Governance go-to-market</span>
-              <span>B2B lead generation</span>
-              <span>Concept papers and proposals</span>
+              <span>Requirements and BRD writing</span>
+              <span>Stakeholder discovery</span>
+              <span>User stories and acceptance criteria</span>
+              <span>Power BI dashboards</span>
+              <span>SQL and data analysis</span>
+              <span>E-Governance solution scoping</span>
             </span></span>
           </div>
-          <p class="lede">I support government and enterprise business development, from the first opportunity screen to a finished tender submission, and I run marketing for the FinTech and E-Governance units.</p>
+          <p class="lede">I sit between the people who have the problem and the people who build the solution: running stakeholder discovery with ministries and enterprise clients, writing the requirements development teams build from, and turning operational data into dashboards leadership actually uses.</p>
           <div class="cta">
             <a class="btn y mag" href="#experience" data-go="experience">See experience <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a>
             <a class="btn mag" href="#contact" data-go="contact">Get in touch</a>
@@ -322,12 +341,12 @@ footer a{text-decoration:none;border-bottom:2px solid var(--amber)}
           <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
             <circle cx="100" cy="100" r="96" fill="#FFC94A" stroke="#16121B" stroke-width="5"/>
             <defs><path id="cp" d="M100 100 m-70 0 a70 70 0 1 1 140 0 a70 70 0 1 1 -140 0"/></defs>
-            <text font-family="JetBrains Mono, monospace" font-weight="700" font-size="15" fill="#16121B"><textPath href="#cp" textLength="430" lengthAdjust="spacing">BUSINESS DEVELOPMENT * GO TO MARKET * TENDERS * </textPath></text>
+            <text font-family="JetBrains Mono, monospace" font-weight="700" font-size="15" fill="#16121B"><textPath href="#cp" textLength="430" lengthAdjust="spacing">BUSINESS ANALYSIS * REQUIREMENTS * DASHBOARDS * </textPath></text>
             <circle cx="100" cy="100" r="16" fill="#5A4BE0" stroke="#16121B" stroke-width="4"/>
           </svg>
-          <span class="sticker s-lilac chip c1"><b>22,000+</b> views</span>
+          <span class="sticker s-lilac chip c1"><b>3</b> scenarios</span>
           <span class="sticker s-white chip c2"><b>4</b> ministries mapped</span>
-          <span class="sticker s-sage chip c3"><b>20+</b> assets</span>
+          <span class="sticker s-sage chip c3"><b>150+</b> users analysed</span>
         </div>
       </div>
     </div>
@@ -335,12 +354,12 @@ footer a{text-decoration:none;border-bottom:2px solid var(--amber)}
 
   <div class="bands" aria-hidden="true">
     <div class="band-row b1"><div class="mt">
-      <ul><li>E-Governance</li><li>FinTech</li><li>Project management consultancy</li><li>Tender support</li><li>EOI pursuits</li><li>B2B lead generation</li></ul>
-      <ul><li>E-Governance</li><li>FinTech</li><li>Project management consultancy</li><li>Tender support</li><li>EOI pursuits</li><li>B2B lead generation</li></ul>
+      <ul><li>Requirements analysis</li><li>BRDs and specifications</li><li>User stories</li><li>Power BI dashboards</li><li>SQL analysis</li><li>Stakeholder discovery</li></ul>
+      <ul><li>Requirements analysis</li><li>BRDs and specifications</li><li>User stories</li><li>Power BI dashboards</li><li>SQL analysis</li><li>Stakeholder discovery</li></ul>
     </div></div>
     <div class="band-row b2"><div class="mt">
-      <ul><li>Go-to-market strategy</li><li>Concept papers</li><li>Content strategy</li><li>Performance reporting</li><li>Stakeholder outreach</li><li>Dashboards</li></ul>
-      <ul><li>Go-to-market strategy</li><li>Concept papers</li><li>Content strategy</li><li>Performance reporting</li><li>Stakeholder outreach</li><li>Dashboards</li></ul>
+      <ul><li>E-Governance</li><li>FinTech</li><li>Scenario modelling</li><li>Concept papers</li><li>Performance reporting</li><li>Tender support</li></ul>
+      <ul><li>E-Governance</li><li>FinTech</li><li>Scenario modelling</li><li>Concept papers</li><li>Performance reporting</li><li>Tender support</li></ul>
     </div></div>
   </div>
 
@@ -348,12 +367,12 @@ footer a{text-decoration:none;border-bottom:2px solid var(--amber)}
     <div class="wrap">
       <div class="sec-head rv"><span class="sticker s-lilac">Results</span><h2>Numbers from <span class="hl">the work so far</span></h2></div>
       <div class="stats">
-        <div class="stat t1 pop rv" data-from="left"><span class="num" data-to="22000" data-suffix="+">22,000+</span><p>content views on LinkedIn and Facebook in six weeks</p></div>
-        <div class="stat t2 pop rv" style="--d:.08s"><span class="num" data-to="200" data-suffix="+">200+</span><p>new followers with zero paid spend</p></div>
-        <div class="stat t3 pop rv" data-from="right" style="--d:.16s"><span class="num" data-to="20" data-suffix="+">20+</span><p>marketing assets: scripts, storyboards, posters, carousels</p></div>
-        <div class="stat t4 pop rv" data-from="left"><span class="num" data-to="700" data-suffix="+">700+</span><p>participants at an event whose internal operations I led</p></div>
-        <div class="stat t5 pop rv" style="--d:.08s"><span class="num" data-to="4" data-suffix="">4</span><p>ministries in one commercial framework, three engagement scenarios</p></div>
-        <div class="stat t6 pop rv" data-from="right" style="--d:.16s"><span class="num" data-to="100" data-suffix="+">100+</span><p>students reached through EdTech curriculum work</p></div>
+        <div class="stat t1 pop rv" data-from="left"><span class="num" data-to="4" data-suffix="">4</span><p>ministries mapped in a single commercial framework</p></div>
+        <div class="stat t2 pop rv" style="--d:.08s"><span class="num" data-to="3" data-suffix="">3</span><p>engagement scenarios modelled for government rollout</p></div>
+        <div class="stat t3 pop rv" data-from="right" style="--d:.16s"><span class="num" data-to="150" data-suffix="+">150+</span><p>user responses analysed to guide product and curriculum decisions</p></div>
+        <div class="stat t4 pop rv" data-from="left"><span class="num" data-to="22000" data-suffix="+">22,000+</span><p>content views in six weeks with zero paid spend</p></div>
+        <div class="stat t5 pop rv" style="--d:.08s"><span class="num" data-to="700" data-suffix="+">700+</span><p>participants at an event whose internal operations I led</p></div>
+        <div class="stat t6 pop rv" data-from="right" style="--d:.16s"><span class="num" data-to="20" data-suffix="+">20+</span><p>assets produced: scripts, storyboards, posters, carousels</p></div>
       </div>
     </div>
   </section>
@@ -363,12 +382,13 @@ footer a{text-decoration:none;border-bottom:2px solid var(--amber)}
       <div class="split">
         <div class="rv" data-from="left">
           <span class="sticker s-sage">Profile</span>
-          <h2>Business strategy, <span class="hl">built with digital tools</span></h2>
+          <h2>Turning business problems into <span class="hl">specifications that ship</span></h2>
           <div class="prose">
-            <p>I work at the point where business development meets technology delivery. My days cover government stakeholder outreach, tender and proposal support, FinTech and E-Governance go-to-market strategy, B2B lead generation, and marketing operations.</p>
+            <p>My title at Technohaven is Marketing and Business Development Officer, but the work is business analysis. I run stakeholder discovery with ministries and enterprise clients, capture what they actually need, and document it as business requirements, functional specifications and user stories the development team can build from.</p>
+            <p>The other half is data. I use SQL, Excel and Power BI to turn raw operational and pipeline data into dashboards and structured reports that senior management use to make decisions, and I track delivery and dependencies in Jira, Odoo and Taskosaur.</p>
             <p>Outside the day job I lead events and have worked in an EdTech startup, which taught me how to run teams, track execution, and keep communication clear when many people depend on it.</p>
           </div>
-          <p class="pull"><span class="hl">Bridging business strategy with digital innovation</span> to build scalable, impact-driven solutions.</p>
+          <p class="pull"><span class="hl">Bridging business needs with technical delivery</span> through clear requirements and honest data.</p>
         </div>
         <div class="card pop rv" data-from="right" style="--rot:1deg">
           <div class="edu-title">Education</div>
@@ -388,7 +408,7 @@ footer a{text-decoration:none;border-bottom:2px solid var(--amber)}
       <div class="rv">
         <div class="tabs" id="tabs" role="tablist" aria-label="Roles">
           <span class="tab-ind" id="ind"></span>
-          <button class="tab" role="tab" id="t0" aria-controls="p0" aria-selected="true"><strong>Officer</strong><span>Sep 2026 to Present</span></button>
+          <button class="tab" role="tab" id="t0" aria-controls="p0" aria-selected="true"><strong>Business Analyst</strong><span>Sep 2026 to Present</span></button>
           <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="false" tabindex="-1"><strong>Marketing Intern</strong><span>May 2026 to Aug 2026</span></button>
           <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"><strong>Operations Lead</strong><span>Feb 2025 to Jun 2026</span></button>
         </div>
@@ -396,25 +416,27 @@ footer a{text-decoration:none;border-bottom:2px solid var(--amber)}
           <div class="viewport" id="viewport">
             <div class="track" id="track">
               <article class="panel" id="p0" role="tabpanel" aria-labelledby="t0">
-                <h3>Marketing and Business Development Officer</h3>
+                <h3>Business Analyst</h3>
                 <p class="org">Technohaven Company Limited</p><span class="when">Sep 2026 to Present</span>
+                <p class="note">Formal title: Marketing and Business Development Officer. The day-to-day work is business analysis.</p>
                 <ul class="bul">
-                  <li>Drive government business development for the E-Governance and PMC strategic business units, building relationships with ministries and state agencies through targeted outreach, senior-level meetings, and on-site visits.</li>
-                  <li>Support tender and EOI pursuits end to end, from screening opportunities to preparing technical competence narratives, project portfolios, team CVs, and compliance documents for timely submission.</li>
-                  <li>Build and maintain lead databases and prospect lists across insurance, manufacturing, and private-sector groups, identifying qualified clients and mapping likely buyers for products such as e-KYC onboarding.</li>
+                  <li>Run stakeholder discovery across E-Governance and PMC engagements, interviewing ministry and state-agency users to establish what a solution actually has to do before scope is fixed.</li>
+                  <li>Translate those conversations into business requirements documents, functional specifications, and user stories with acceptance criteria that the development team builds from.</li>
+                  <li>Analyse operational and pipeline data using SQL, Excel, and Power BI, maintaining dashboards and structured monthly reports on pipeline, tenders, outreach, and field visits for senior management.</li>
                   <li>Write concept papers and proposals for ministries and agencies, including investment facilitation, land management, and social services programs, positioning Technohaven's PMC and software capabilities.</li>
-                  <li>Prepare structured monthly work-summary reports on pipeline, tenders, outreach, and field visits for senior management.</li>
-                  <li>Lead marketing for the FinTech and E-Governance units, managing the content calendar, performance tracking, explainer video scripts, and campaign assets for LinkedIn and Facebook.</li>
+                  <li>Support tender and EOI pursuits end to end, from screening opportunities to preparing technical competence narratives, project portfolios, team CVs, and compliance documents for timely submission.</li>
+                  <li>Map likely buyers for products such as e-KYC onboarding, building and maintaining qualified lead databases across insurance, manufacturing, and private-sector groups.</li>
+                  <li>Track delivery and dependencies in Jira, Odoo, and Taskosaur, and lead marketing for the FinTech and E-Governance units.</li>
                 </ul>
               </article>
               <article class="panel" id="p1" role="tabpanel" aria-labelledby="t1" aria-hidden="true">
                 <h3>Marketing Intern</h3>
                 <p class="org">Technohaven Company Limited</p><span class="when">May 2026 to Aug 2026</span>
                 <ul class="bul">
-                  <li>Drove the go-to-market strategy for Technohaven's FinTech Strategic Business Unit, delivering the Gantt-tracked operating plan, product naming, regulatory research, and full sales enablement and creative platform.</li>
+                  <li>Produced the analysis behind the FinTech Strategic Business Unit launch: regulatory research, a Gantt-tracked operating plan, product naming, and the full sales enablement and creative platform.</li>
                   <li>Grew organic LinkedIn and Facebook presence to 22,000+ content views and 200+ new followers in six weeks with zero paid spend.</li>
-                  <li>Built a multi-ministry E-Governance commercial framework across four ministries under three engagement scenarios, activating the pipeline via outreach to five ministries plus a repeatable VATPROMPT B2B lead generation system.</li>
-                  <li>Stood up the department's marketing infrastructure (plan, budget, four-platform content calendar, live dashboard), the standard video production methodology, and a browser-based task tracker with dashboard, filterable register, and Gantt timeline.</li>
+                  <li>Modelled a multi-ministry E-Governance commercial framework covering four ministries under three engagement scenarios, including the options analysis behind each scenario, and activated the pipeline through outreach to five ministries plus a repeatable VATPROMPT lead generation system.</li>
+                  <li>Specified and built a browser-based task tracker with a dashboard, filterable register, and Gantt timeline, alongside the department's reporting infrastructure: plan, budget, content calendar, and live dashboard.</li>
                   <li>Produced 20+ marketing assets including video scripts, storyboards, posters, and carousels for LinkedIn and Facebook.</li>
                 </ul>
               </article>
@@ -423,7 +445,7 @@ footer a{text-decoration:none;border-bottom:2px solid var(--amber)}
                 <p class="org">Learno, EdTech Startup</p><span class="when">Feb 2025 to Jun 2026</span>
                 <ul class="bul">
                   <li>Improved course relevance by contributing to curriculum development, impacting 100+ students.</li>
-                  <li>Analyzed feedback from 150+ users, increasing satisfaction scores by an estimated 20%.</li>
+                  <li>Analysed feedback from 150+ users and turned the findings into curriculum and process changes, increasing satisfaction scores by an estimated 20%.</li>
                   <li>Boosted student engagement by approximately 25% through targeted outreach and participation strategies.</li>
                   <li>Supported operational planning and execution, helping scale processes for a growing user base.</li>
                 </ul>
@@ -437,15 +459,51 @@ footer a{text-decoration:none;border-bottom:2px solid var(--amber)}
 
   <section class="sec" id="process">
     <div class="wrap">
-      <div class="sec-head rv"><span class="sticker s-clay">Process</span><h2>How a tender pursuit moves, <span class="hl">start to finish</span></h2><p>The tender and EOI support I provide follows six stages, from the first screen to a submission filed on time.</p></div>
+      <div class="sec-head rv"><span class="sticker s-clay">Process</span><h2>How a requirement becomes <span class="hl">something that ships</span></h2><p>The analysis work follows six stages, from the first stakeholder conversation to a tracked, reportable delivery.</p></div>
       <ol class="steps">
-        <li class="step k1 pop rv" data-from="left"><span class="n">01</span><h3>Screen the opportunity</h3><p>Assess each tender and EOI for fit.</p></li>
-        <li class="step k2 pop rv" style="--d:.08s"><span class="n">02</span><h3>Competence narrative</h3><p>Write the technical competence narrative.</p></li>
-        <li class="step k3 pop rv" data-from="right" style="--d:.16s"><span class="n">03</span><h3>Project portfolio</h3><p>Assemble the relevant project portfolios.</p></li>
-        <li class="step k4 pop rv" data-from="left"><span class="n">04</span><h3>Team CVs</h3><p>Prepare team CVs for the bid.</p></li>
-        <li class="step k5 pop rv" style="--d:.08s"><span class="n">05</span><h3>Compliance documents</h3><p>Complete every compliance document.</p></li>
-        <li class="step k6 pop rv" data-from="right" style="--d:.16s"><span class="n">06</span><h3>Timely submission</h3><p>File the bid on time.</p><span class="stamp">FILED</span></li>
+        <li class="step k1 pop rv" data-from="left"><span class="n">01</span><h3>Stakeholder discovery</h3><p>Interview the people who own the problem.</p></li>
+        <li class="step k2 pop rv" style="--d:.08s"><span class="n">02</span><h3>Capture requirements</h3><p>Record needs, constraints, and success criteria.</p></li>
+        <li class="step k3 pop rv" data-from="right" style="--d:.16s"><span class="n">03</span><h3>Write the BRD</h3><p>Document agreed scope in a requirements doc.</p></li>
+        <li class="step k4 pop rv" data-from="left"><span class="n">04</span><h3>User stories</h3><p>Break scope into stories with acceptance criteria.</p></li>
+        <li class="step k5 pop rv" style="--d:.08s"><span class="n">05</span><h3>Data and dashboards</h3><p>Model the data and build the reporting view.</p></li>
+        <li class="step k6 pop rv" data-from="right" style="--d:.16s"><span class="n">06</span><h3>Track and report</h3><p>Monitor delivery and report to management.</p><span class="stamp">SHIPPED</span></li>
       </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="projects">
+    <div class="wrap">
+      <div class="sec-head rv"><span class="sticker">Projects</span><h2>Tools I specified <span class="hl">and built myself</span></h2><p>Tools where I did the whole job: gathered the requirements, designed the data model, worked out the metrics that mattered, and built the interface.</p></div>
+      <div class="projgrid">
+
+        <article class="proj p1 feat pop rv" data-from="left">
+          <span class="sticker s-white">Pipeline analytics</span>
+          <h3>Sales Performance Console</h3>
+          <p class="sub">Turning tender and EOI activity into numbers management can act on</p>
+          <p class="d">Bid pipelines are easy to describe and hard to measure. This console tracks three record types — qualified leads, EOI submissions and tenders — and derives the metrics the work actually turns on: man-days spent per qualified lead, the share of decided EOIs that were shortlisted, and the share of ranked tenders that placed in the top three. Records carry technical and financial scores and move through preparation, review and outcome, feeding a closure forecast and a set of charts. Data imports and exports through Excel so it fits existing reporting, and a presentation mode strips the interface back for reporting to senior management.</p>
+          <ul class="stack"><li>JavaScript</li><li>Chart.js</li><li>Excel import and export</li><li>Browser storage</li></ul>
+          <div class="links"><a class="lnk" href="https://alphavariant.github.io/sales.html" target="_blank" rel="noopener">Open live app <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a><a class="lnk" href="https://github.com/AlphaVariant/sales-performance-console" target="_blank" rel="noopener">View code <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a></div>
+        </article>
+
+        <article class="proj p3 pop rv" data-from="left">
+          <span class="sticker s-white">Shared-home accounting</span>
+          <h3>Azkaban Meal</h3>
+          <p class="sub">Meal-rate accounting for a shared bachelor home</p>
+          <p class="d">Settling a shared household every month is a genuine data problem: food costs split by meals actually eaten, amenities split equally per head, and deposits paid in uneven installments. The app tracks members and a day-by-day meal chart, separates the food pool from amenities because they settle on different rules, calculates the monthly meal rate, and produces a settlement showing who is owed a refund and who needs to top up. It also carries a live price declaration, a shopping list that feeds straight into the settlement, and Excel and print export.</p>
+          <ul class="stack"><li>JavaScript</li><li>Supabase</li><li>Auth and roles</li><li>Excel export</li></ul>
+          <div class="links"><a class="lnk" href="https://github.com/AlphaVariant/azkaban-meal" target="_blank" rel="noopener">View code <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a></div>
+        </article>
+
+        <article class="proj p2 pop rv" data-from="right">
+          <span class="sticker s-white">Live app</span>
+          <h3>World Cup 2026 Fixture Hub</h3>
+          <p class="sub">All 104 matches, in Dhaka time</p>
+          <p class="d">Every FIFA World Cup 2026 fixture converted to Dhaka time, with search and filters by team, group, city and date, favourite teams saved in the browser, live countdowns, and Upcoming, Live and Finished status. Group standings calculate themselves from results, and a knockout bracket follows on. Live scores come from the football-data.org API through a Vercel serverless function, so the API key never reaches the client.</p>
+          <ul class="stack"><li>JavaScript</li><li>Serverless function</li><li>REST API</li><li>Vercel</li></ul>
+          <div class="links"><a class="lnk" href="https://worldcup-hub-sigma.vercel.app/" target="_blank" rel="noopener">Open live app <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a><a class="lnk" href="https://github.com/AlphaVariant/worldcup-hub" target="_blank" rel="noopener">View code <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a></div>
+        </article>
+
+      </div>
     </div>
   </section>
 
@@ -507,10 +565,10 @@ footer a{text-decoration:none;border-bottom:2px solid var(--amber)}
     <div class="wrap">
       <div class="sec-head rv"><span class="sticker s-sage">Skills</span><h2>Tools <span class="hl">and strengths</span></h2></div>
       <div class="skgrid">
-        <div class="sk a pop rv" data-from="left"><h3>Business development</h3><ul class="chips"><li>Government stakeholder outreach</li><li>Tender and EOI support</li><li>Proposal and concept paper writing</li><li>Sales pipeline management</li><li>Lead database building</li></ul></div>
-        <div class="sk b pop rv" data-from="right"><h3>Marketing and strategy</h3><ul class="chips"><li>Go-to-market strategy</li><li>B2B lead generation</li><li>Social media: LinkedIn, Meta</li><li>Content and campaign planning</li><li>Performance reporting</li><li>Market and regulatory research</li></ul></div>
-        <div class="sk c pop rv" data-from="left"><h3>Technical and tools</h3><ul class="chips"><li>Excel</li><li>Power BI</li><li>Word</li><li>PowerPoint</li><li>Dashboards and data analysis</li><li>Odoo</li><li>Taskosaur</li><li>Canva</li></ul></div>
-        <div class="sk d pop rv" data-from="right"><h3>Professional</h3><ul class="chips"><li>Leadership and team coordination</li><li>Event operations</li><li>Stakeholder and client engagement</li><li>Critical thinking and problem solving</li><li>Data handling and reporting</li></ul></div>
+        <div class="sk a pop rv" data-from="left"><h3>Business analysis</h3><ul class="chips"><li>Stakeholder discovery and interviews</li><li>Requirements gathering</li><li>BRD and functional specifications</li><li>User stories and acceptance criteria</li><li>Scenario and options analysis</li><li>Concept papers and proposals</li></ul></div>
+        <div class="sk b pop rv" data-from="right"><h3>Data and reporting</h3><ul class="chips"><li>SQL and database queries</li><li>Power BI dashboards</li><li>Excel modelling</li><li>Performance reporting</li><li>Market and regulatory research</li></ul></div>
+        <div class="sk c pop rv" data-from="left"><h3>Tools</h3><ul class="chips"><li>Jira</li><li>Odoo</li><li>Taskosaur</li><li>Power BI</li><li>Excel</li><li>Word</li><li>PowerPoint</li><li>Canva</li></ul></div>
+        <div class="sk d pop rv" data-from="right"><h3>Domain and professional</h3><ul class="chips"><li>E-Governance and FinTech</li><li>Tender and EOI support</li><li>Government stakeholder engagement</li><li>Go-to-market strategy</li><li>Leadership and team coordination</li><li>Critical thinking and problem solving</li></ul></div>
       </div>
     </div>
   </section>
@@ -520,7 +578,7 @@ footer a{text-decoration:none;border-bottom:2px solid var(--amber)}
       <div class="contact">
         <div class="rv" data-from="left">
           <span class="sticker s-white">Contact</span>
-          <h2>Say hello about <span class="hl">business development</span> and go-to-market work</h2>
+          <h2>Say hello about <span class="hl">business analysis</span> and digital delivery work</h2>
           <p class="prose">Reach me by email or phone, or connect on LinkedIn.</p>
         </div>
         <div class="card rows rv" data-from="right">
@@ -584,7 +642,7 @@ footer a{text-decoration:none;border-bottom:2px solid var(--amber)}
         }
       });
     }, {rootMargin:'-45% 0px -50% 0px'});
-    ['results','profile','experience','process','leadership','skills','contact'].forEach(function(id){ var s = document.getElementById(id); if(s) so.observe(s); });
+    ['results','profile','experience','process','projects','leadership','skills','contact'].forEach(function(id){ var s = document.getElementById(id); if(s) so.observe(s); });
   }
 
   /* Reveal on scroll */
