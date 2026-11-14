@@ -53,7 +53,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .zig::after{bottom:-1px;transform:scaleY(-1)}
 
 /* Stickers and type */
-.sticker{display:inline-block;padding:6px 14px;border:3px solid var(--ink);box-shadow:3px 3px 0 var(--ink);font-family:var(--f-mono);font-weight:700;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dark);rotate:-2deg;background:var(--amber)}
+.sticker{display:inline-block;align-self:flex-start;justify-self:start;padding:6px 14px;border:3px solid var(--ink);box-shadow:3px 3px 0 var(--ink);font-family:var(--f-mono);font-weight:700;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--dark);rotate:-2deg;background:var(--amber)}
 .s-lilac{background:var(--lilac)}
 .s-sage{background:var(--sage)}
 .s-white{background:#fff}
@@ -491,11 +491,11 @@ footer a{text-decoration:none;border-bottom:2px solid var(--amber)}
           <p class="sub">Meal-rate accounting for a shared bachelor home</p>
           <p class="d">Settling a shared household every month is a genuine data problem: food costs split by meals actually eaten, amenities split equally per head, and deposits paid in uneven installments. The app tracks members and a day-by-day meal chart, separates the food pool from amenities because they settle on different rules, calculates the monthly meal rate, and produces a settlement showing who is owed a refund and who needs to top up. It also carries a live price declaration, a shopping list that feeds straight into the settlement, and Excel and print export.</p>
           <ul class="stack"><li>JavaScript</li><li>Supabase</li><li>Auth and roles</li><li>Excel export</li></ul>
-          <div class="links"><a class="lnk" href="https://github.com/AlphaVariant/azkaban-meal" target="_blank" rel="noopener">View code <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a></div>
+          <div class="links"><a class="lnk" href="https://alphavariant.github.io/azkaban-meal/" target="_blank" rel="noopener">Open live app <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a><a class="lnk" href="https://github.com/AlphaVariant/azkaban-meal" target="_blank" rel="noopener">View code <svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></a></div>
         </article>
 
         <article class="proj p2 pop rv" data-from="right">
-          <span class="sticker s-white">Live app</span>
+          <span class="sticker s-white">Fixtures and standings</span>
           <h3>World Cup 2026 Fixture Hub</h3>
           <p class="sub">All 104 matches, in Dhaka time</p>
           <p class="d">Every FIFA World Cup 2026 fixture converted to Dhaka time, with search and filters by team, group, city and date, favourite teams saved in the browser, live countdowns, and Upcoming, Live and Finished status. Group standings calculate themselves from results, and a knockout bracket follows on. Live scores come from the football-data.org API through a Vercel serverless function, so the API key never reaches the client.</p>
